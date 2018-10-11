@@ -12,8 +12,10 @@ var userSchema = new Schema({
     required:true 
   },
   password: {
-    type: String
-    }
+    type : String,
+    required: [true, 'password is required'],
+    minlength: [6, 'password min 6 character'],
+  }
 });
 
 var User=mongoose.model('User',userSchema);
