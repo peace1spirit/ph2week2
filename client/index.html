@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
+    
   </head>
 
   <body>
@@ -40,7 +41,7 @@
     <!-- Page Content -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-3" >
+        <div class="col-lg-3"  >
           <div v-if="islogin">
               <h4>Add new Event</h4>
               <div class="list-group">
@@ -61,7 +62,7 @@
               <hr>
             
           <h4>Search</h4>
-          <div class="list-group">
+          <div class="list-group"  v-if="islogin">
             <form>
               <div class="form-group">
                 <input type="text" class="form-control"  v-model="searchtxt" placeholder="Search...">
